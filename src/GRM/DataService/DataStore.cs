@@ -66,13 +66,13 @@ namespace GRM.DataService
                         while ((s = reader.ReadLine()) != null)
                         {
                             var lineStrings = s.Split('|');
-                            var musicContract = new PartnerContract
+                            var partnerContract = new PartnerContract
                             {
                                 Partner = lineStrings.Length > 0 ? lineStrings[0] : string.Empty,
                                 Usage = lineStrings.Length > 1 ? lineStrings[1] : string.Empty
                             };
 
-                            partnerContracts.Add(musicContract);
+                            partnerContracts.Add(partnerContract);
                         }
                     }
             }
